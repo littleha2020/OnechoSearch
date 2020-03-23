@@ -1,0 +1,58 @@
+{
+  "id": "1708652",
+  "name": "chp",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2286127",
+      "name": "知乎",
+      "font_class": "zhihu",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "3360310",
+      "name": "bilibili",
+      "font_class": "bilibili",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "4712215",
+      "name": "map",
+      "font_class": "map",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "10571678",
+      "name": "google auth",
+      "font_class": "search",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "11130469",
+      "name": "wikipedia-w",
+      "font_class": "wikipedia-w",
+      "unicode": "e75a",
+      "unicode_decimal": 59226
+    },
+    {
+      "icon_id": "12939672",
+      "name": "百度",
+      "font_class": "baidu",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "13470346",
+      "name": "bing",
+      "font_class": "bing",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    }
+  ]
+}
