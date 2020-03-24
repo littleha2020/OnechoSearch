@@ -29,9 +29,9 @@
   - [x] 百度地图
   - [x] 知乎
   - [x] 哔哩哔哩
-  - [ ] 快递查询
-  - [ ] Stack Overflow
-  - [ ] 新浪微博
-  - [ ] YouTube
-  - [ ] 网购比价
+  - [x] 快递查询
+  - [x] Stack Overflow
+  - [x] 新浪微博
+  - [x] YouTube
+  - [x] 网购比价
 
