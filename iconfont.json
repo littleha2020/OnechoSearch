@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3623732",
+      "name": "新浪微博",
+      "font_class": "xinlangweibo",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "6085986",
+      "name": "youtube",
+      "font_class": "youtube",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "7278431",
+      "name": "stack-overflow",
+      "font_class": "stack-overflow",
+      "unicode": "e858",
+      "unicode_decimal": 59480
+    },
+    {
+      "icon_id": "9135007",
+      "name": "快递",
+      "font_class": "kuaidi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "13433929",
+      "name": "shop-car2",
+      "font_class": "shop-car",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
       "icon_id": "2286127",
       "name": "知乎",
       "font_class": "zhihu",
@@ -56,3 +91,4 @@
     }
   ]
 }
+ 

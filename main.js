@@ -24,3 +24,4 @@ $('.search-button').click(function () {
     }
     window.open(tools_api + search_text);
 });
+console.log('OnechoSearch v0.0.2');
