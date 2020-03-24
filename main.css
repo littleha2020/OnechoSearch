@@ -5,6 +5,14 @@
 body,html{
     height: 100%;
     overflow: hidden;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue","Helvetica",PingFang SC,PingFang TC,Hiragino Sans GB,STHeiti,Microsoft YaHei,Microsoft JhengHei,"WenQuanYi Micro Hei",sans-serif;
+    moz-user-select: -moz-none; 
+    -moz-user-select: none; 
+    -o-user-select:none; 
+    -khtml-user-select:none; 
+    -webkit-user-select:none; 
+    -ms-user-select:none; 
+    user-select:none;
 }
 /* 用户登录栏 */
 #user_bar{
@@ -14,6 +22,7 @@ body,html{
     height: 50px;
     width: 100%;
     background-color: rgba(128, 128, 128, 0.253);
+    display: none;
 }
 /* 背景图片 */
 #background{
@@ -38,8 +47,7 @@ body,html{
     color: white;
     font-size: 90px;
     font-weight: 400;
-    text-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue","Helvetica",PingFang SC,PingFang TC,Hiragino Sans GB,STHeiti,Microsoft YaHei,Microsoft JhengHei,"WenQuanYi Micro Hei",sans-serif
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 /* 搜索框 */
 #search{
@@ -52,48 +60,142 @@ body,html{
     line-height: 44px;
     background-color: white;
     border-radius: 30px;
-    box-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28)
+    box-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
 }
 #search_icon{
     height: 40px;
     width: 35px;
-    margin-left: 10px;
-    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 20px);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzVGNjM2OCI+PHBhdGggZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==);
     background-repeat: no-repeat;
     background-position: 50% 45%;
     background-size: 60%;
-    vertical-align: middle;
 }
 #search_input{
     width: calc(100% - 100px);
     height: 30px;
+    position: absolute;
+    left: 40px;
+    top: calc(50% - 15px);
     outline: none;
     display: inline-block;
     border: none;
     margin: 0;
     font-size: 18px;
 }
+#search_often{
+    height: 44px;
+    width: 30px;
+    position: absolute;
+    right: -1px;
+    top: calc(50% - 22px);
+    padding-left: 10px;
+    border-radius: 3px 50px 50px 3px;
+    background-color: #202020;
+    cursor: pointer;
+}
+
 /* 搜索按钮 */
-#search_bottun{
+#search_bottun-1{
     position: absolute;
     left: 50%;
     top: 355px;
     transform: translate(-50%, 0);
     width: 560px;
     text-align: center;
+    z-index: 11;
 }
-.search-button{
+#search_bottun-2{
+    position: absolute;
+    left: 50%;
+    top: 390px;
+    transform: translate(-50%, 0);
+    width: 560px;
+    text-align: center;
+}
+.search-button-bottom{
     color: white;
     display: inline-block;
     text-decoration: none;
     background-color: rgb(32, 32, 32);
     height: 30px;
     width: 50px;
+    margin: 5px 2px;
     line-height: 30px;
     text-align: center;
     border-radius: 5px;
     font-size: 20px;
-    text-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
+    box-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
     cursor: pointer;
+    position: relative;
+}
+.search-button-bottom:hover::after{
+    z-index: 10;
+    display: block;
+    box-shadow: 0px 1px 6px 0 rgba(255, 255, 255, 0.28);
+}
+.search-button-bottom::after{
+    content: attr(data-tools-type);
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 0 10px;
+    height: 30px;
+    display: none;
+    background-color: rgb(32, 32, 32);
+    border-radius: 5px;
+    transition-duration: 250ms;
+    font-size: 0.5em;
+}
+
+.search-button-top{
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(32, 32, 32);
+    height: 30px;
+    width: 50px;
+    margin: 5px 2px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
+    cursor: pointer;
+    position: relative;
+}
+.search-button-top:hover::after{
+    z-index: 10;
+    display: block;
+    box-shadow: 0px 1px 6px 0 rgba(255, 255, 255, 0.28);
+}
+.search-button-top::after{
+    content: attr(data-tools-type);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 0 10px;
+    height: 30px;
+    display: none;
+    background-color: rgb(32, 32, 32);
+    border-radius: 5px;
+    transition-duration: 250ms;
+    font-size: 0.5em;
+}
+/* 页脚 */
+#footer{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    line-height: 25px;
+    vertical-align: middle;
 }
