@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onecho - 即刻检索</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .icon {
+          width: 1em;
+          height: 1em;
+          vertical-align: -0.15em;
+          fill: currentColor;
+          overflow: hidden;
+        }
+        </style>
+</head>
+<body>
+    <div id="user_bar"></div>
+    <div id="background"></div>
+    <div id="logo">
+        <h1>Onecho</h1>
+    </div>
+    <div id="search">
+        <div id="search_icon"></div>
+        <input type="text" name="" id="search_input" placeholder="即刻检索" autofocus="autofocus">
+    </div>
+    <div id="search_bottun">
+        <a class="search-button" data-tools-type="百度">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-baidu"></use>
+            </svg>
+        </a> 
+        <a class="search-button" data-tools-type="谷歌">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-search"></use>
+            </svg>
+        </a> 
+        <a class="search-button" data-tools-type="必应">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-bing"></use>
+            </svg>
+        </a> 
+        <a class="search-button" data-tools-type="维基">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-wikipedia-w"></use>
+            </svg>
+        </a> 
+        <a class="search-button" data-tools-type="百度地图">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-map"></use>
+            </svg>
+        </a> 
+        <a class="search-button" data-tools-type="知乎">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-zhihu"></use>
+            </svg>
+        </a> 
+        <a class="search-button" data-tools-type="哔哩哔哩">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-bilibili"></use>
+            </svg>
+        </a> 
+    </div>
+    <script src="http://littleha.test.upcdn.net/cdn/jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
+    <script src="iconfont.js"></script>
+</body>
+</html>
