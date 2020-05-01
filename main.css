@@ -1,8 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body,html{
+body,html {
     height: 100%;
     overflow: hidden;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue","Helvetica",PingFang SC,PingFang TC,Hiragino Sans GB,STHeiti,Microsoft YaHei,Microsoft JhengHei,"WenQuanYi Micro Hei",sans-serif;
@@ -15,17 +15,18 @@ body,html{
     user-select:none;
 }
 /* 用户登录栏 */
-#user_bar{
+#user_bar {
     position: absolute;
     left: 0;
     top: 0;
-    height: 50px;
+    height: 65px;
     width: 100%;
     background-color: rgba(128, 128, 128, 0.253);
     display: none;
+    
 }
 /* 背景图片 */
-#background{
+#background {
     width: 100%;
     height: 100%;
     background-image: url('http://littleha.test.upcdn.net/2020/03/23/32f77fe81d024.png');
@@ -35,34 +36,40 @@ body,html{
     background-position: center;
 }
 /* 站点标题 */
-#logo{
+#logo {
     position: absolute;
     left: 50%;
-    top: 95px;
+    bottom: calc(20% + 200px);
     transform: translate(-50%, 0);
     height: 200px;
     line-height: 200px;
 }
-#logo>h1{
+#logo>h1 {
     color: white;
     font-size: 90px;
-    font-weight: 400;
+    font-weight: 200;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
-/* 搜索框 */
-#search{
+/* 主搜索区 */
+.main-serach {
     position: absolute;
     left: 50%;
-    top: 295px;
-    transform: translate(-50%, 0);
+    bottom: 25%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+}
+
+/* 搜索框 */
+#search {
+    position: relative;
     height: 44px;
-    width: 560px;
+    width: 100%;
     line-height: 44px;
     background-color: white;
     border-radius: 30px;
     box-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
 }
-#search_icon{
+#search_icon {
     height: 40px;
     width: 35px;
     position: absolute;
@@ -73,7 +80,7 @@ body,html{
     background-position: 50% 45%;
     background-size: 60%;
 }
-#search_input{
+#search_input {
     width: calc(100% - 100px);
     height: 30px;
     position: absolute;
@@ -85,7 +92,7 @@ body,html{
     margin: 0;
     font-size: 18px;
 }
-#search_often{
+#search_often {
     height: 44px;
     width: 30px;
     position: absolute;
@@ -98,98 +105,66 @@ body,html{
 }
 
 /* 搜索按钮 */
-#search_bottun-1{
-    position: absolute;
-    left: 50%;
-    top: 355px;
-    transform: translate(-50%, 0);
-    width: 560px;
+#search_bottun {
+    width: 100%;
+    margin: 10px 0;
     text-align: center;
     z-index: 11;
 }
-#search_bottun-2{
-    position: absolute;
-    left: 50%;
-    top: 390px;
-    transform: translate(-50%, 0);
-    width: 560px;
-    text-align: center;
-}
-.search-button-bottom{
+.search-button-top {
     color: white;
     display: inline-block;
     text-decoration: none;
     background-color: rgb(32, 32, 32);
-    height: 30px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     margin: 5px 2px;
-    line-height: 30px;
+    line-height: 35px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 41px;
     font-size: 20px;
     box-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
     cursor: pointer;
     position: relative;
 }
-.search-button-bottom:hover::after{
-    z-index: 10;
+.search-button-top:hover::after {
+    z-index: 11;
     display: block;
-    box-shadow: 0px 1px 6px 0 rgba(255, 255, 255, 0.28);
 }
-.search-button-bottom::after{
+.search-button-top::after {
     content: attr(data-tools-type);
     position: absolute;
-    top: 35px;
+    top: -45px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
     padding: 0 10px;
-    height: 30px;
+    height: 35px;
     display: none;
     background-color: rgb(32, 32, 32);
     border-radius: 5px;
     transition-duration: 250ms;
-    font-size: 0.5em;
+    font-size: 0.69em;
 }
-
-.search-button-top{
-    color: white;
-    display: inline-block;
-    text-decoration: none;
-    background-color: rgb(32, 32, 32);
-    height: 30px;
-    width: 50px;
-    margin: 5px 2px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 20px;
-    box-shadow: 0px 1px 6px 0 rgba(32, 33, 36, .28);
-    cursor: pointer;
-    position: relative;
-}
-.search-button-top:hover::after{
+.search-button-top:hover::before {
     z-index: 10;
     display: block;
-    box-shadow: 0px 1px 6px 0 rgba(255, 255, 255, 0.28);
 }
-.search-button-top::after{
-    content: attr(data-tools-type);
+.search-button-top::before  {
+    content: "";
     position: absolute;
-    top: -35px;
+    top: -20px;
     left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    padding: 0 10px;
-    height: 30px;
+    transform: translateX(-50%) rotate(45deg);
+    height: 15px;
+    width: 15px;
     display: none;
     background-color: rgb(32, 32, 32);
-    border-radius: 5px;
     transition-duration: 250ms;
     font-size: 0.5em;
 }
 /* 页脚 */
-#footer{
+#footer {
     position: absolute;
     bottom: 10px;
     left: 50%;

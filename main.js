@@ -29,7 +29,9 @@ $('.search-button').click(function () {
         break;
         case "快递查询":tools_api = "https://www.kuaidi100.com/?nu=";
         break;
-        case "网购比价":tools_api = "http://www.b1bj.com/ws.aspx?key=";
+        case "网购比价":tools_api = "http://www.b1bj.com/s.aspx?key=";
+        break;
+        case "域名注册":tools_api = "https://namebeta.com/search/";
         break;
     }
     window.open(tools_api + search_text);
